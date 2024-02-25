@@ -1,4 +1,4 @@
 streamlit
 duckduckgo_search
-google.generativeai
+google-generativeai
 time
