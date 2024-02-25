@@ -1,22 +1,11 @@
 from duckduckgo_search import DDGS
 import google.generativeai as genai
-from dotenv import load_dotenv
 
 import streamlit as st
 import os
 
-# Everything is accessible via the st.secrets dict:
-st.write("Gemini API Key:", st.secrets["GOOGLE_API_KEY"])
 
-# And the root-level secrets are also accessible as environment variables:
-st.write(
-    "Has environment variables been set:",
-    os.environ["GOOGLE_API_KEY"] == st.secrets["GOOGLE_API_KEY"],
-)
-
-
-load_dotenv()
-GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
+GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
 genai.configure(api_key=GOOGLE_API_KEY)
 model = genai.GenerativeModel('gemini-pro')  
 
