@@ -1,8 +1,5 @@
 import streamlit as st
 from chatbot import Chatbot
-import markdown
-import random
-import time
 
 
 # Streamed response emulator
