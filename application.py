@@ -1,6 +1,6 @@
 import streamlit as st
 from chatbot import Chatbot
-
+import time
 
 # Streamed response emulator
 def response_generator(response):
